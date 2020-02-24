@@ -1,0 +1,3 @@
+- Menu on top right side of items, with Expand and Favourite buttons;
+- Check item to mark as done;
+- Maybe third button with options "Move up", "Move Down" and "Edit";
