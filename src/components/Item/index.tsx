@@ -1,5 +1,5 @@
 import React from 'react';
-import {Wrapper, Content} from './styles';
+import {Wrapper, CheckBox, Content} from './styles';
 
 type ItemProps = {
   title: string;
@@ -9,7 +9,7 @@ const Item = ({title}: ItemProps) => {
   return (
     <Wrapper>
       <Content>
-        <input type="checkbox" />
+        <CheckBox type="checkbox" />
         <span>{title}</span>
       </Content>
     </Wrapper>

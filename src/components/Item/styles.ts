@@ -11,3 +11,7 @@ export const Content = styled.div`
   display: flex;
   align-items: center;
 `;
+
+export const CheckBox = styled.input`
+  margin-right: 5px;
+`;
