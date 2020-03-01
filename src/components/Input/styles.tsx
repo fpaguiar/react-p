@@ -10,9 +10,14 @@ export const Wrapper = styled.div`
 `;
 
 export const TodoInput = styled.input`
-  border: none;
   border-radius: 5px;
+  border: none;
   flex: 1;
   font-size: 18px;
+  height: 100%;
+`;
+
+export const AddButton = styled.button`
+  font-size: 14px;
   height: 100%;
 `;

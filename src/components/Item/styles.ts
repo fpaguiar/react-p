@@ -15,3 +15,7 @@ export const Content = styled.div`
 export const CheckBox = styled.input`
   margin-right: 5px;
 `;
+
+export const Text = styled.span`
+  font-size: 14px;
+`;

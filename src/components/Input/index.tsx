@@ -1,12 +1,28 @@
-import React from 'react';
-import {TodoInput, Wrapper} from './styles';
+import React, {useState} from 'react';
+import {AddButton, TodoInput, Wrapper} from './styles';
 import {FiChevronRight} from 'react-icons/fi';
 
-const Input = () => {
+type InputProps = {
+  onAdd: (t: string) => void;
+}
+
+const Input = ({onAdd}: InputProps) => {
+  const [todo, setTodo] = useState('');
+  const updateValue = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setTodo(event.target.value);
+  };
+  const addNewTodo = () => onAdd(todo);
+
   return (
     <Wrapper>
       <FiChevronRight />
-      <TodoInput type="text" placeholder="What do you need to do?"/>
+      <TodoInput
+        onChange={updateValue}
+        placeholder="What do you need to do?"
+        type="text"
+        value={todo}
+      />
+      <AddButton onClick={addNewTodo}>Add</AddButton>
     </Wrapper>
   );
 };
