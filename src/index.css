@@ -1,22 +1,26 @@
-@import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
 
 * {
   box-sizing: border-box;
 }
 
-body, #root {
+html, body, #root {
   width: 100%;
+  height: 100%;
   margin: 0;
   padding: 0;
   border: none;
-  font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
+}
+
+body, #root, input {
+  font-family: 'Quicksand', Arial, Helvetica, sans-serif;
 }
 
 :root {
-  --color-primary: #BFD7EA;
+  --color-primary: #D0DEEA;
   --color-warning:#E0FF4F;
   --color-danger: #FF6663;
-  --color-light: #FEFFFE;
+  --color-white: #FEFFFE;
   --color-dark: #0B3954;
   --color-black: #03131C;
   --color-shadow: #CCCCCC;
