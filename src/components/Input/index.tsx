@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {AddButton, TodoInput, Wrapper} from './styles';
-import {FiChevronRight} from 'react-icons/fi';
+import {FiChevronRight, FiPlus} from 'react-icons/fi';
 
 type InputProps = {
   onAdd: (t: string) => void;
@@ -22,7 +22,7 @@ const Input = ({onAdd}: InputProps) => {
         type="text"
         value={todo}
       />
-      <AddButton onClick={addNewTodo}>Add</AddButton>
+      <AddButton onClick={addNewTodo}><FiPlus /></AddButton>
     </Wrapper>
   );
 };

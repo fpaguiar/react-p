@@ -18,6 +18,10 @@ export const TodoInput = styled.input`
 `;
 
 export const AddButton = styled.button`
+  align-items: center;
+  display: flex;
   font-size: 14px;
   height: 100%;
+  font-weight: bold;
+  font-size: 24px;
 `;
