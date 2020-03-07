@@ -12,3 +12,12 @@ body, #root {
   font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
 }
 
+:root {
+  --color-primary: #BFD7EA;
+  --color-warning:#E0FF4F;
+  --color-danger: #FF6663;
+  --color-light: #FEFFFE;
+  --color-dark: #0B3954;
+  --color-black: #03131C;
+  --color-shadow: #CCCCCC;
+}
