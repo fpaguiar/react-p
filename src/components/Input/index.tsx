@@ -7,36 +7,35 @@ type InputProps = {
 }
 
 const useTodo = (onAdd: (t: string) => void) => {
-  const [isEnabled, setEnabled] = useState(false);
+  const [isDisabled, setDisabled] = useState(true);
   const [todo, setTodo] = useState('');
 
   const updateValue = (event: React.ChangeEvent<HTMLInputElement>) => {
     setTodo(event.target.value);
   };
   const addNewTodo = () => {
-    if (isEnabled) {
-      onAdd(todo);
-      setTodo('');
-    }
+    onAdd(todo);
+    setTodo('');
   };
 
   useEffect(() => {
     if (!todo.length) {
-      setEnabled(false);
+      setDisabled(true);
     } else {
-      setEnabled(true);
+      setDisabled(false);
     }
   }, [todo]);
 
   return {
     addNewTodo,
+    isDisabled,
     todo,
     updateValue,
   };
 };
 
 const Input = ({onAdd}: InputProps) => {
-  const {addNewTodo, todo, updateValue} = useTodo(onAdd);
+  const {addNewTodo, isDisabled, todo, updateValue} = useTodo(onAdd);
 
   return (
     <Wrapper>
@@ -49,7 +48,9 @@ const Input = ({onAdd}: InputProps) => {
           value={todo}
         />
       </InputWrapper>
-      <AddButton onClick={addNewTodo}><FiPlus /></AddButton>
+      <AddButton disabled={isDisabled} onClick={addNewTodo}>
+        <FiPlus />
+      </AddButton>
     </Wrapper>
   );
 };
