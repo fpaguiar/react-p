@@ -1,11 +1,8 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-  margin: 5px 0;
+  margin: 10px 0;
   padding: 5px;
-  border: 1px solid #CCC;
-  border-radius: 5px;
-  background-color: var(--color-white);
 `;
 
 export const Content = styled.div`
@@ -14,7 +11,7 @@ export const Content = styled.div`
 `;
 
 export const CheckBox = styled.input`
-  margin-right: 5px;
+  margin-right: 10px;
 `;
 
 export const Text = styled.span`

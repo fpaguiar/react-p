@@ -17,11 +17,12 @@ body, #root, input {
 }
 
 :root {
-  --color-primary: #D0DEEA;
+  --color-primary: #4056F4;
   --color-warning:#E0FF4F;
   --color-danger: #FF6663;
   --color-white: #FEFFFE;
   --color-dark: #0B3954;
   --color-black: #03131C;
+  --color-grey: #B2ABAD;
   --color-shadow: #CCCCCC;
 }
